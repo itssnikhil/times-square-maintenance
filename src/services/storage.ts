@@ -10,7 +10,7 @@ const defaultExpenses: SocietyExpense[] = (savedData && savedData.expenses && (s
   ? (savedData.expenses as unknown as SocietyExpense[])
   : INITIAL_EXPENSES;
 
-const FLATS_STORAGE_KEY = 'times_square_flats_v2';
+const FLATS_STORAGE_KEY = 'times_square_flats_v3';
 const CONFIG_STORAGE_KEY = 'times_square_config_v2';
 const EXPENSES_STORAGE_KEY = 'times_square_expenses_v1';
 const ADMIN_AUTH_KEY = 'times_square_admin_session_v1';
@@ -21,12 +21,22 @@ export const DEFAULT_ADMIN_PIN = '1234';
 export const StorageService = {
   getFlats(): FlatUnit[] {
     try {
-      const data = localStorage.getItem(FLATS_STORAGE_KEY);
+      // Clear out legacy key if present
+      localStorage.removeItem('times_square_flats_v2');
+
+      let data = localStorage.getItem(FLATS_STORAGE_KEY);
       if (!data) {
         this.saveFlats(defaultFlats);
         return defaultFlats;
       }
       const parsed: FlatUnit[] = JSON.parse(data);
+
+      // If cached data is the old 15 dummy flats (e.g. Amitabh Roy), auto-replace with all 70 real flats
+      const isOldDummy = parsed.length <= 15 && parsed.some(f => f.residentName === 'Amitabh Roy' || f.residentName === 'Vikram Malhotra');
+      if (isOldDummy) {
+        this.saveFlats(defaultFlats);
+        return defaultFlats;
+      }
       let changed = false;
       const migrated = parsed.map((f) => {
         let updated = { ...f };

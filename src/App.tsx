@@ -229,11 +229,11 @@ export function App() {
       setIsPinModalOpen(true);
       return;
     }
-    if (window.confirm('Reset all records to default 15 flats & sample society expenses?')) {
+    if (window.confirm('Reset all records to official 70 society flats & expenses?')) {
       const reset = StorageService.resetAll();
       setFlats(reset.flats);
       setExpenses(reset.expenses);
-      showToast('Reset to default Wing A, Wing C & expenses');
+      showToast('Reset to official 70 society flats');
     }
   };
 
