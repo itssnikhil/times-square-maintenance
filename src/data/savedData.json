@@ -1,0 +1,4099 @@
+{
+  "flats": [
+    {
+      "id": "flat-c-101-6343",
+      "flatNo": "C 101",
+      "wing": "C",
+      "floor": 1,
+      "residentName": "Divya Jain",
+      "phone": "9800000000",
+      "email": "divya.jain@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-826343",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        }
+      ],
+      "isExemptFromDefaulter": false,
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-102-5703",
+      "flatNo": "C 102",
+      "wing": "C",
+      "floor": 1,
+      "residentName": "Shyam kumar Gupta",
+      "email": "shyam.kumar.gupta@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-355703",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "amount": 0,
+          "isExempt": false
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        }
+      ],
+      "manualStatusOverride": true,
+      "isExemptFromDefaulter": false
+    },
+    {
+      "id": "flat-c-103-6446",
+      "flatNo": "C 103",
+      "wing": "C",
+      "floor": 1,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        }
+      ],
+      "manualStatusOverride": true,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant"
+    },
+    {
+      "id": "flat-c-104-8669",
+      "flatNo": "C 104",
+      "wing": "C",
+      "floor": 1,
+      "residentName": "Sachin Ingle",
+      "email": "sachin.ingle@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-658669",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        }
+      ],
+      "isExemptFromDefaulter": false,
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-106-2236",
+      "flatNo": "C 106",
+      "wing": "C",
+      "floor": 1,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        }
+      ],
+      "manualStatusOverride": true,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant"
+    },
+    {
+      "id": "flat-c-107-2375",
+      "flatNo": "C 107",
+      "wing": "C",
+      "floor": 1,
+      "residentName": "doctor jii",
+      "email": "doctor.jii@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-152375",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        }
+      ],
+      "isExemptFromDefaulter": false,
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-201-9554",
+      "flatNo": "C 201",
+      "wing": "C",
+      "floor": 2,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "amount": 0,
+          "isExempt": true
+        }
+      ],
+      "manualStatusOverride": true,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant"
+    },
+    {
+      "id": "flat-c-202-7245",
+      "flatNo": "C 202",
+      "wing": "C",
+      "floor": 2,
+      "residentName": ".....",
+      "email": ".....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "amount": 0,
+          "isExempt": false
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "amount": 0,
+          "isExempt": false
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "amount": 0,
+          "isExempt": false
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "amount": 0,
+          "isExempt": false
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "amount": 0,
+          "isExempt": false
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "amount": 0,
+          "isExempt": false
+        }
+      ],
+      "manualStatusOverride": true,
+      "isExemptFromDefaulter": false
+    },
+    {
+      "id": "flat-c-203-6504",
+      "flatNo": "C 203",
+      "wing": "C",
+      "floor": 2,
+      "residentName": "Arun Verma",
+      "email": "arun.verma@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true,
+      "isExemptFromDefaulter": false
+    },
+    {
+      "id": "flat-c-204-0166",
+      "flatNo": "C 204",
+      "wing": "C",
+      "floor": 2,
+      "residentName": "Lokesh dhakad",
+      "email": "lokesh.dhakad@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-880166",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "amount": 1000,
+          "isExempt": false
+        }
+      ],
+      "isExemptFromDefaulter": false,
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-205-5841",
+      "flatNo": "C 205",
+      "wing": "C",
+      "floor": 2,
+      "residentName": "rakhi",
+      "email": "rakhi@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 3,
+      "accumulatedArrears": 3000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": "REC-985841",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "customOverdueAmount": 3000,
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-206-7091",
+      "flatNo": "C 206",
+      "wing": "C",
+      "floor": 2,
+      "residentName": "Anna aunty",
+      "email": "anna.aunty@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-367092",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-207-0838",
+      "flatNo": "C 207",
+      "wing": "C",
+      "floor": 2,
+      "residentName": "Hariram",
+      "email": "hariram.@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-480838",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-301-3695",
+      "flatNo": "C 301",
+      "wing": "C",
+      "floor": 3,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 5500,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-302-7625",
+      "flatNo": "C 302",
+      "wing": "C",
+      "floor": 3,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-303-3276",
+      "flatNo": "C 303",
+      "wing": "C",
+      "floor": 3,
+      "residentName": "Rekha yadav",
+      "email": "rekha.yadav@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-923276",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-304-6958",
+      "flatNo": "C 304",
+      "wing": "C",
+      "floor": 3,
+      "residentName": "kapil",
+      "email": "kapil@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-996958",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-305-8413",
+      "flatNo": "C 305",
+      "wing": "C",
+      "floor": 3,
+      "residentName": "Neha pawar",
+      "email": "neha.pawar@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-058413",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-306-0961",
+      "flatNo": "C 306",
+      "wing": "C",
+      "floor": 3,
+      "residentName": ".....",
+      "email": ".....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-307-6310",
+      "flatNo": "C 307",
+      "wing": "C",
+      "floor": 3,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 5500,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-401-2718",
+      "flatNo": "C 401",
+      "wing": "C",
+      "floor": 4,
+      "residentName": "veena poddar",
+      "email": "veena.poddar@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-342718",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-402-2665",
+      "flatNo": "C 402",
+      "wing": "C",
+      "floor": 4,
+      "residentName": "rishi poddar",
+      "email": "rishi.poddar@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": "REC-452665",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-403-9585",
+      "flatNo": "C 403",
+      "wing": "C",
+      "floor": 4,
+      "residentName": "diplai",
+      "email": "diplai@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-404-6201",
+      "flatNo": "C 404",
+      "wing": "C",
+      "floor": 4,
+      "residentName": "anish",
+      "email": "anish@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-736201",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-405-6763",
+      "flatNo": "C 405",
+      "wing": "C",
+      "floor": 4,
+      "residentName": "ajit bhargava",
+      "email": "ajit.bhargava@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-856763",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-406-0753",
+      "flatNo": "C 406",
+      "wing": "C",
+      "floor": 4,
+      "residentName": "rekha",
+      "email": "rekha@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-930753",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-407-9736",
+      "flatNo": "C 407",
+      "wing": "C",
+      "floor": 4,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-501-1564",
+      "flatNo": "C 501",
+      "wing": "C",
+      "floor": 5,
+      "residentName": "pankaj gupta",
+      "email": "pankaj.gupta@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-101564",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-502-4737",
+      "flatNo": "C 502",
+      "wing": "C",
+      "floor": 5,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 5500,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-503-3718",
+      "flatNo": "C 503",
+      "wing": "C",
+      "floor": 5,
+      "residentName": "omprakash",
+      "email": "omprakash@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-163718",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-504-0503",
+      "flatNo": "C 504",
+      "wing": "C",
+      "floor": 5,
+      "residentName": "vivek gour",
+      "email": "vivek.gour@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-280503",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-505-4386",
+      "flatNo": "C 505",
+      "wing": "C",
+      "floor": 5,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-334386",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-506-2055",
+      "flatNo": "C 506",
+      "wing": "C",
+      "floor": 5,
+      "residentName": "ajay kumar",
+      "email": "ajay.kumar@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-512055",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-507-3622",
+      "flatNo": "C 507",
+      "wing": "C",
+      "floor": 5,
+      "residentName": "sudarshan kaur",
+      "email": "sudarshan.kaur@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-603622",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-c-601-6899",
+      "flatNo": "C 601",
+      "wing": "C",
+      "floor": 6,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-602-3036",
+      "flatNo": "C 602",
+      "wing": "C",
+      "floor": 6,
+      "residentName": "sukhaveer singh",
+      "email": "sukhaveer.singh@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 4,
+      "accumulatedArrears": 4000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-603-9959",
+      "flatNo": "C 603",
+      "wing": "C",
+      "floor": 6,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-604-5538",
+      "flatNo": "C 604",
+      "wing": "C",
+      "floor": 6,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 5500,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-605-7371",
+      "flatNo": "C 605",
+      "wing": "C",
+      "floor": 6,
+      "residentName": "ajeet singh",
+      "email": "ajeet.singh@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-c-606-1506",
+      "flatNo": "C 606",
+      "wing": "C",
+      "floor": 6,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "flat-c-607-8708",
+      "flatNo": "C 607",
+      "wing": "C",
+      "floor": 6,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 5,
+      "accumulatedArrears": 5000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-105-5791",
+      "flatNo": "A 105",
+      "wing": "A",
+      "floor": 1,
+      "residentName": "op",
+      "email": "op@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-107-2406",
+      "flatNo": "A 107",
+      "wing": "A",
+      "floor": 1,
+      "residentName": "advocate mishra",
+      "email": "advocate.mishra@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 6,
+      "accumulatedArrears": 6000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-108-9141",
+      "flatNo": "A 108",
+      "wing": "A",
+      "floor": 1,
+      "residentName": "rena",
+      "email": "rena@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-109-4244",
+      "flatNo": "A 109",
+      "wing": "A",
+      "floor": 1,
+      "residentName": "sr",
+      "email": "sr@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-206-0343",
+      "flatNo": "A 206",
+      "wing": "A",
+      "floor": 2,
+      "residentName": "rajesh",
+      "email": "rajesh@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat--a-207-0225",
+      "flatNo": "A 207",
+      "wing": "A",
+      "floor": 2,
+      "residentName": "sage",
+      "email": "sage@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 5500,
+      "status": "Empty",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": true,
+      "exemptionReason": "Flat was empty / Vacant",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 5500,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 5500,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 5500,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 5500,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-208-8711",
+      "flatNo": "A 208",
+      "wing": "A",
+      "floor": 2,
+      "residentName": "vikas",
+      "email": "vikas@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-668711",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-302-6410",
+      "flatNo": "A 302",
+      "wing": "A",
+      "floor": 3,
+      "residentName": ",,",
+      "email": ",,@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-303-8685",
+      "flatNo": "A 303",
+      "wing": "A",
+      "floor": 3,
+      "residentName": "neha",
+      "email": "neha@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 4,
+      "accumulatedArrears": 4000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-304-8655",
+      "flatNo": "A 304",
+      "wing": "A",
+      "floor": 3,
+      "residentName": "manish",
+      "email": "manish@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-305-9685",
+      "flatNo": "A 305",
+      "wing": "A",
+      "floor": 3,
+      "residentName": "asha",
+      "email": "asha@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-659685",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-306-4581",
+      "flatNo": "A 306",
+      "wing": "A",
+      "floor": 3,
+      "residentName": "pawan verma",
+      "email": "pawan.verma@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-307-5762",
+      "flatNo": "A 307",
+      "wing": "A",
+      "floor": 3,
+      "residentName": "jaiswal ji",
+      "email": "jaiswal.ji@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-805762",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-308-1747",
+      "flatNo": "A 308",
+      "wing": "A",
+      "floor": 3,
+      "residentName": "pallavi",
+      "email": "pallavi@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-401-0315",
+      "flatNo": "A 401",
+      "wing": "A",
+      "floor": 4,
+      "residentName": ".....",
+      "email": ".....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-070315",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-403-8403",
+      "flatNo": "A 403",
+      "wing": "A",
+      "floor": 4,
+      "residentName": "riya",
+      "email": "riya@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-158403",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-405-5664",
+      "flatNo": "A 405",
+      "wing": "A",
+      "floor": 4,
+      "residentName": "dj",
+      "email": "dj@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": "REC-235664",
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-406-6336",
+      "flatNo": "A 406",
+      "wing": "A",
+      "floor": 4,
+      "residentName": "sonu",
+      "email": "sonu@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-408-4553",
+      "flatNo": "A 408",
+      "wing": "A",
+      "floor": 4,
+      "residentName": "shukla ji",
+      "email": "shukla.ji@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-409-8389",
+      "flatNo": "A 409",
+      "wing": "A",
+      "floor": 4,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 6,
+      "accumulatedArrears": 6000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-501-7400",
+      "flatNo": "A 501",
+      "wing": "A",
+      "floor": 5,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 5,
+      "accumulatedArrears": 5000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-503-7384",
+      "flatNo": "A 503",
+      "wing": "A",
+      "floor": 5,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-505-0804",
+      "flatNo": "A 505",
+      "wing": "A",
+      "floor": 5,
+      "residentName": "prince",
+      "email": "prince@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-507-9165",
+      "flatNo": "A 507",
+      "wing": "A",
+      "floor": 5,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-508-8602",
+      "flatNo": "A 508",
+      "wing": "A",
+      "floor": 5,
+      "residentName": "ajeet",
+      "email": "ajeet.@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-509-9934",
+      "flatNo": "A 509",
+      "wing": "A",
+      "floor": 5,
+      "residentName": "sandeep",
+      "email": "sandeep@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 3,
+      "accumulatedArrears": 3000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-607-4066",
+      "flatNo": "A 607",
+      "wing": "A",
+      "floor": 6,
+      "residentName": ".....",
+      "email": ".....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        }
+      ]
+    },
+    {
+      "id": "flat-a-608-7117",
+      "flatNo": "A 608",
+      "wing": "A",
+      "floor": 6,
+      "residentName": "....",
+      "email": "....@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-609-4051",
+      "flatNo": "A 609",
+      "wing": "A",
+      "floor": 6,
+      "residentName": "...",
+      "email": "...@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": false,
+          "isExempt": true,
+          "amount": 0
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    }
+  ],
+  "expenses": [],
+  "timestamp": "2026-10-10T23:34:23.157Z"
+}

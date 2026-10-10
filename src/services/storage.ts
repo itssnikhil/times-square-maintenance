@@ -1,5 +1,14 @@
 import { FlatUnit, SocietyConfig, INITIAL_FLATS, INITIAL_SOCIETY_CONFIG, BILLING_MONTHS } from '../data/mockData';
 import { SocietyExpense, INITIAL_EXPENSES } from '../data/expenseData';
+import savedData from '../data/savedData.json';
+
+const defaultFlats: FlatUnit[] = (savedData && savedData.flats && (savedData.flats as any[]).length > 0)
+  ? (savedData.flats as unknown as FlatUnit[])
+  : INITIAL_FLATS;
+
+const defaultExpenses: SocietyExpense[] = (savedData && savedData.expenses && (savedData.expenses as any[]).length > 0)
+  ? (savedData.expenses as unknown as SocietyExpense[])
+  : INITIAL_EXPENSES;
 
 const FLATS_STORAGE_KEY = 'times_square_flats_v2';
 const CONFIG_STORAGE_KEY = 'times_square_config_v2';
@@ -14,8 +23,8 @@ export const StorageService = {
     try {
       const data = localStorage.getItem(FLATS_STORAGE_KEY);
       if (!data) {
-        this.saveFlats(INITIAL_FLATS);
-        return INITIAL_FLATS;
+        this.saveFlats(defaultFlats);
+        return defaultFlats;
       }
       const parsed: FlatUnit[] = JSON.parse(data);
       let changed = false;
@@ -120,13 +129,13 @@ export const StorageService = {
     try {
       const data = localStorage.getItem(EXPENSES_STORAGE_KEY);
       if (!data) {
-        this.saveExpenses(INITIAL_EXPENSES);
-        return INITIAL_EXPENSES;
+        this.saveExpenses(defaultExpenses);
+        return defaultExpenses;
       }
       return JSON.parse(data);
     } catch (e) {
       console.error('Failed to read expenses from storage', e);
-      return INITIAL_EXPENSES;
+      return defaultExpenses;
     }
   },
 
@@ -142,10 +151,10 @@ export const StorageService = {
     localStorage.removeItem(FLATS_STORAGE_KEY);
     localStorage.removeItem(CONFIG_STORAGE_KEY);
     localStorage.removeItem(EXPENSES_STORAGE_KEY);
-    this.saveFlats(INITIAL_FLATS);
+    this.saveFlats(defaultFlats);
     this.saveConfig(INITIAL_SOCIETY_CONFIG);
-    this.saveExpenses(INITIAL_EXPENSES);
-    return { flats: INITIAL_FLATS, config: INITIAL_SOCIETY_CONFIG, expenses: INITIAL_EXPENSES };
+    this.saveExpenses(defaultExpenses);
+    return { flats: defaultFlats, config: INITIAL_SOCIETY_CONFIG, expenses: defaultExpenses };
   },
 
   exportData(): string {

@@ -103,8 +103,9 @@ const buildDues = (amount: number, unpaidCount: number = 0): MonthDueRecord[] =>
   });
 };
 
-// 15 flats across Wing A and Wing C with month-by-month dues history starting from May 2026
-export const INITIAL_FLATS: FlatUnit[] = [
+import savedData from './savedData.json';
+
+const fallbackFlats: FlatUnit[] = [
   // ==================== WING A ====================
   {
     id: "flat-a-101",
@@ -409,3 +410,7 @@ export const INITIAL_FLATS: FlatUnit[] = [
     monthlyDues: buildDues(6500, 0),
   },
 ];
+
+export const INITIAL_FLATS: FlatUnit[] = (savedData && savedData.flats && (savedData.flats as any[]).length > 0)
+  ? (savedData.flats as unknown as FlatUnit[])
+  : fallbackFlats;

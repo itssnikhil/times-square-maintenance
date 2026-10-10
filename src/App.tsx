@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { FlatUnit, INITIAL_FLATS, BILLING_MONTHS } from './data/mockData';
 import { SocietyExpense, INITIAL_EXPENSES } from './data/expenseData';
 import { StorageService } from './services/storage';
@@ -90,6 +90,19 @@ export function App() {
       maximumFractionDigits: 0,
     }).format(amt);
   };
+
+  // Auto-sync data to local server disk (so it can be permanently deployed to GitHub/Vercel)
+  useEffect(() => {
+    try {
+      if (flats && flats.length > 0) {
+        fetch('/api/sync-data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ flats, expenses, timestamp: new Date().toISOString() }),
+        }).catch(() => {});
+      }
+    } catch (e) {}
+  }, [flats, expenses]);
 
   // -------------------------------------------------------------
   // FLAT MAINTENANCE ACTIONS
