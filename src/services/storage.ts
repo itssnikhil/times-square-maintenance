@@ -12,7 +12,7 @@ const defaultExpenses: SocietyExpense[] = (savedData && savedData.expenses && (s
 
 const FLATS_STORAGE_KEY = 'times_square_flats_v3';
 const CONFIG_STORAGE_KEY = 'times_square_config_v2';
-const EXPENSES_STORAGE_KEY = 'times_square_expenses_v1';
+const EXPENSES_STORAGE_KEY = 'times_square_expenses_v2';
 const ADMIN_AUTH_KEY = 'times_square_admin_session_v1';
 const ADMIN_PIN_KEY = 'times_square_admin_pin_v1';
 
@@ -137,12 +137,19 @@ export const StorageService = {
 
   getExpenses(): SocietyExpense[] {
     try {
+      localStorage.removeItem('times_square_expenses_v1');
       const data = localStorage.getItem(EXPENSES_STORAGE_KEY);
       if (!data) {
         this.saveExpenses(defaultExpenses);
         return defaultExpenses;
       }
-      return JSON.parse(data);
+      const parsed: SocietyExpense[] = JSON.parse(data);
+      // If cached data contains dummy sample expenses, purge and return empty array
+      if (parsed.some(e => e.id === 'exp-1' || e.vendorName?.includes('Apex Security'))) {
+        this.saveExpenses([]);
+        return [];
+      }
+      return parsed;
     } catch (e) {
       console.error('Failed to read expenses from storage', e);
       return defaultExpenses;

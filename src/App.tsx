@@ -1163,9 +1163,26 @@ export function App() {
             {/* Expense Cards List */}
             <div className="space-y-3">
               {filteredExpenses.length === 0 ? (
-                <div className="p-8 text-center bg-white rounded-2xl border border-slate-300">
-                  <Receipt className="w-8 h-8 text-slate-400 mx-auto mb-2" />
-                  <p className="text-xs sm:text-sm text-slate-500 font-medium">No expense items found matching filter.</p>
+                <div className="p-10 text-center bg-white rounded-2xl border border-slate-300 shadow-xs space-y-3">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 mx-auto flex items-center justify-center">
+                    <Receipt className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-black text-slate-900">No Society Expenses Recorded</h3>
+                    <p className="text-xs text-slate-500 mt-0.5">
+                      The expenses and bills ledger is currently empty.
+                    </p>
+                  </div>
+                  {isAdmin && (
+                    <button
+                      type="button"
+                      onClick={handleRequestAddExpense}
+                      className="px-4 py-2 bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-black text-xs rounded-xl inline-flex items-center gap-1.5 transition border border-yellow-500 shadow-xs"
+                    >
+                      <Plus className="w-4 h-4" />
+                      <span>Add Expense</span>
+                    </button>
+                  )}
                 </div>
               ) : (
                 filteredExpenses.map((exp) => {
