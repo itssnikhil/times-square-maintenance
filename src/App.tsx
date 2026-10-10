@@ -32,7 +32,9 @@ import {
   Wrench,
   Droplet,
   ArrowLeft,
-  Home
+  Home,
+  Download,
+  Upload
 } from 'lucide-react';
 
 export function App() {
@@ -220,6 +222,46 @@ export function App() {
       setExpenses(reset.expenses);
       showToast('Reset to default Wing A, Wing C & expenses');
     }
+  };
+
+  const handleBackupData = () => {
+    try {
+      const json = StorageService.exportData();
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `times_square_society_backup_${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast('Downloaded Society Data Backup (.json)');
+    } catch (e) {
+      alert('Failed to export backup.');
+    }
+  };
+
+  const handleImportData = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const content = event.target?.result as string;
+      if (!content) return;
+
+      const result = StorageService.importData(content);
+      if (result.success) {
+        if (result.flats) setFlats(result.flats);
+        if (result.expenses) setExpenses(result.expenses);
+        showToast('Society data successfully restored!');
+      } else {
+        alert(result.message || 'Failed to restore data.');
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
   };
 
   const handleExportExcel = () => {
@@ -488,12 +530,40 @@ export function App() {
               <span className="hidden sm:inline">Word</span>
             </button>
 
+            {/* Backup Data (Download JSON) */}
+            {isAdmin && (
+              <button
+                type="button"
+                onClick={handleBackupData}
+                className="p-2 rounded-xl text-yellow-400 hover:text-white hover:bg-slate-900 transition min-h-[42px] min-w-[42px] flex items-center justify-center border border-slate-700"
+                title="Backup / Download all Society Data as JSON"
+              >
+                <Download className="w-4 h-4" />
+              </button>
+            )}
+
+            {/* Restore Data (Upload JSON) */}
+            {isAdmin && (
+              <label
+                className="p-2 rounded-xl text-yellow-400 hover:text-white hover:bg-slate-900 transition min-h-[42px] min-w-[42px] flex items-center justify-center border border-slate-700 cursor-pointer"
+                title="Restore / Upload Society Data from JSON backup"
+              >
+                <Upload className="w-4 h-4" />
+                <input
+                  type="file"
+                  accept=".json"
+                  onChange={handleImportData}
+                  className="hidden"
+                />
+              </label>
+            )}
+
             {/* Reset Data */}
             {isAdmin && (
               <button
                 type="button"
                 onClick={handleResetData}
-                className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 transition min-h-[42px] min-w-[42px] flex items-center justify-center"
+                className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 transition min-h-[42px] min-w-[42px] flex items-center justify-center border border-slate-800"
                 title="Reset Sample Data"
               >
                 <RotateCcw className="w-4 h-4" />

@@ -148,6 +148,41 @@ export const StorageService = {
     return { flats: INITIAL_FLATS, config: INITIAL_SOCIETY_CONFIG, expenses: INITIAL_EXPENSES };
   },
 
+  exportData(): string {
+    const data = {
+      flats: this.getFlats(),
+      expenses: this.getExpenses(),
+      config: this.getConfig(),
+      exportedAt: new Date().toISOString(),
+    };
+    return JSON.stringify(data, null, 2);
+  },
+
+  importData(jsonString: string): { success: boolean; flats?: FlatUnit[]; expenses?: SocietyExpense[]; config?: SocietyConfig; message?: string } {
+    try {
+      const data = JSON.parse(jsonString);
+      if (!data.flats || !Array.isArray(data.flats)) {
+        return { success: false, message: 'Invalid backup file: missing flats list' };
+      }
+      this.saveFlats(data.flats);
+      if (data.expenses && Array.isArray(data.expenses)) {
+        this.saveExpenses(data.expenses);
+      }
+      if (data.config) {
+        this.saveConfig(data.config);
+      }
+      return {
+        success: true,
+        flats: data.flats,
+        expenses: data.expenses || this.getExpenses(),
+        config: data.config || this.getConfig(),
+      };
+    } catch (e: any) {
+      console.error('Import failed', e);
+      return { success: false, message: e?.message || 'Invalid JSON backup file' };
+    }
+  },
+
   getAdminPin(): string {
     return localStorage.getItem(ADMIN_PIN_KEY) || DEFAULT_ADMIN_PIN;
   },
