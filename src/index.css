@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sat: env(safe-area-inset-top, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars for clean official feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Defaulter warning pulse keyframes */
+@keyframes warning-glow-light {
+  0%, 100% {
+    box-shadow: 0 0 10px -2px rgba(239, 68, 68, 0.2), inset 0 0 0 1px rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 18px 2px rgba(239, 68, 68, 0.35), inset 0 0 0 1.5px rgba(239, 68, 68, 0.7);
+  }
+}
+
+.defaulter-pulse {
+  animation: warning-glow-light 3s infinite ease-in-out;
+}
+
+/* Print styling for monthly reports & receipts */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-card {
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+    background: white !important;
+    color: black !important;
+  }
+}
