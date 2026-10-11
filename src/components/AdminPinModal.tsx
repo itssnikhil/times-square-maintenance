@@ -52,11 +52,6 @@ export const AdminPinModal: React.FC<AdminPinModalProps> = ({
     }
   };
 
-  const handleQuickUnlock = () => {
-    onAuthenticate(true);
-    onClose();
-  };
-
   const handleLogout = () => {
     onAuthenticate(false);
     onClose();
@@ -161,7 +156,7 @@ export const AdminPinModal: React.FC<AdminPinModalProps> = ({
             <div>
               <h2 className="text-base font-bold text-white">Enter Secretary PIN</h2>
               <p className="text-xs text-slate-400 mt-0.5">
-                Default demonstration PIN is <strong className="text-amber-400 font-mono">1234</strong>
+                Authorized secretary login required to edit records.
               </p>
             </div>
 
@@ -183,7 +178,7 @@ export const AdminPinModal: React.FC<AdminPinModalProps> = ({
 
             {error && (
               <p className="text-xs text-rose-400 font-semibold animate-pulse">
-                Incorrect PIN. Please try 1234.
+                Incorrect PIN. Please try again.
               </p>
             )}
 
@@ -219,18 +214,6 @@ export const AdminPinModal: React.FC<AdminPinModalProps> = ({
                 className="h-12 rounded-xl bg-slate-850 hover:bg-slate-800 text-sm font-semibold text-slate-400 transition flex items-center justify-center"
               >
                 ⌫
-              </button>
-            </div>
-
-            {/* 1-Tap Quick Unlock for Demo */}
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={handleQuickUnlock}
-                className="w-full min-h-[44px] rounded-xl font-bold text-xs bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 flex items-center justify-center gap-1.5 transition active:scale-95 shadow-md shadow-amber-500/20"
-              >
-                <Unlock className="w-4 h-4" />
-                <span>1-Tap Demo Unlock (PIN: 1234)</span>
               </button>
             </div>
           </div>

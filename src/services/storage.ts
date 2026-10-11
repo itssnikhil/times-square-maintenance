@@ -14,9 +14,9 @@ const FLATS_STORAGE_KEY = 'times_square_flats_v3';
 const CONFIG_STORAGE_KEY = 'times_square_config_v2';
 const EXPENSES_STORAGE_KEY = 'times_square_expenses_v2';
 const ADMIN_AUTH_KEY = 'times_square_admin_session_v1';
-const ADMIN_PIN_KEY = 'times_square_admin_pin_v1';
+const ADMIN_PIN_KEY = 'times_square_admin_pin_v2';
 
-export const DEFAULT_ADMIN_PIN = '1234';
+export const DEFAULT_ADMIN_PIN = '5923';
 
 export const StorageService = {
   getFlats(): FlatUnit[] {
@@ -210,7 +210,11 @@ export const StorageService = {
   },
 
   getAdminPin(): string {
-    return localStorage.getItem(ADMIN_PIN_KEY) || DEFAULT_ADMIN_PIN;
+    const saved = localStorage.getItem(ADMIN_PIN_KEY);
+    if (!saved || saved === '1234') {
+      return DEFAULT_ADMIN_PIN;
+    }
+    return saved;
   },
 
   setAdminPin(newPin: string): void {

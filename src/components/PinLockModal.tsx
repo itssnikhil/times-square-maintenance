@@ -159,7 +159,7 @@ export const PinLockModal: React.FC<PinLockModalProps> = ({
 
               {error && (
                 <p className="text-xs text-rose-600 font-bold">
-                  Incorrect PIN. Try default: 1234
+                  Incorrect PIN. Please try again.
                 </p>
               )}
 
@@ -169,10 +169,6 @@ export const PinLockModal: React.FC<PinLockModalProps> = ({
               >
                 Unlock Secretary Controls
               </button>
-
-              <div className="text-[11px] text-slate-400">
-                Default PIN: <strong className="text-slate-700 font-mono">1234</strong>
-              </div>
             </form>
           </div>
         )}
