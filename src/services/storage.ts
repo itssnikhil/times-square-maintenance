@@ -10,7 +10,7 @@ const defaultExpenses: SocietyExpense[] = (savedData && savedData.expenses && (s
   ? (savedData.expenses as unknown as SocietyExpense[])
   : INITIAL_EXPENSES;
 
-const FLATS_STORAGE_KEY = 'times_square_flats_v3';
+const FLATS_STORAGE_KEY = 'times_square_flats_v4';
 const CONFIG_STORAGE_KEY = 'times_square_config_v2';
 const EXPENSES_STORAGE_KEY = 'times_square_expenses_v2';
 const ADMIN_AUTH_KEY = 'times_square_admin_session_v1';
@@ -21,8 +21,9 @@ export const DEFAULT_ADMIN_PIN = '5923';
 export const StorageService = {
   getFlats(): FlatUnit[] {
     try {
-      // Clear out legacy key if present
+      // Clear out legacy keys so all devices get the fresh 42-paid data
       localStorage.removeItem('times_square_flats_v2');
+      localStorage.removeItem('times_square_flats_v3');
 
       let data = localStorage.getItem(FLATS_STORAGE_KEY);
       if (!data) {

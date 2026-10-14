@@ -1231,12 +1231,12 @@
       "email": "rishi.poddar@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Pending",
-      "overdueMonths": 1,
-      "accumulatedArrears": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
       "isExemptFromDefaulter": false,
-      "lastPaidDate": null,
-      "lastPaymentMode": null,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
       "referenceNo": "REC-452665",
       "secretaryNotes": "",
       "history": [],
@@ -1267,9 +1267,11 @@
         },
         {
           "month": "Sep 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         },
         {
           "month": "Oct 2026",
@@ -2622,12 +2624,12 @@
       "email": "rajesh@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Pending",
-      "overdueMonths": 1,
-      "accumulatedArrears": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
       "isExemptFromDefaulter": false,
-      "lastPaidDate": null,
-      "lastPaymentMode": null,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
       "referenceNo": null,
       "secretaryNotes": "",
       "history": [],
@@ -2658,9 +2660,11 @@
         },
         {
           "month": "Sep 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         },
         {
           "month": "Oct 2026",
@@ -2929,12 +2933,12 @@
       "email": "manish@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Pending",
-      "overdueMonths": 1,
-      "accumulatedArrears": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
       "isExemptFromDefaulter": false,
-      "lastPaidDate": null,
-      "lastPaymentMode": null,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
       "referenceNo": null,
       "secretaryNotes": "",
       "history": [],
@@ -2971,11 +2975,14 @@
         },
         {
           "month": "Oct 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         }
-      ]
+      ],
+      "manualStatusOverride": true
     },
     {
       "id": "flat-a-305-9685",
@@ -3160,12 +3167,12 @@
       "email": "pallavi@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Pending",
-      "overdueMonths": 1,
-      "accumulatedArrears": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
       "isExemptFromDefaulter": false,
-      "lastPaidDate": null,
-      "lastPaymentMode": null,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
       "referenceNo": null,
       "secretaryNotes": "",
       "history": [],
@@ -3202,11 +3209,14 @@
         },
         {
           "month": "Oct 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         }
-      ]
+      ],
+      "manualStatusOverride": true
     },
     {
       "id": "flat-a-401-0315",
@@ -3449,12 +3459,12 @@
       "email": "shukla.ji@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Pending",
-      "overdueMonths": 1,
-      "accumulatedArrears": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
       "isExemptFromDefaulter": false,
-      "lastPaidDate": null,
-      "lastPaymentMode": null,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
       "referenceNo": null,
       "secretaryNotes": "",
       "history": [],
@@ -3491,11 +3501,14 @@
         },
         {
           "month": "Oct 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         }
-      ]
+      ],
+      "manualStatusOverride": true
     },
     {
       "id": "flat-a-409-8389",
@@ -3624,66 +3637,6 @@
       "email": "....@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Defaulter",
-      "overdueMonths": 2,
-      "accumulatedArrears": 2000,
-      "isExemptFromDefaulter": false,
-      "lastPaidDate": null,
-      "lastPaymentMode": null,
-      "referenceNo": null,
-      "secretaryNotes": "",
-      "history": [],
-      "monthlyDues": [
-        {
-          "month": "May 2026",
-          "isPaid": true,
-          "isExempt": false,
-          "amount": 1000
-        },
-        {
-          "month": "Jun 2026",
-          "isPaid": true,
-          "isExempt": false,
-          "amount": 1000
-        },
-        {
-          "month": "Jul 2026",
-          "isPaid": true,
-          "isExempt": false,
-          "amount": 1000
-        },
-        {
-          "month": "Aug 2026",
-          "isPaid": true,
-          "isExempt": false,
-          "amount": 1000,
-          "paidDate": "Today",
-          "paymentMode": "UPI"
-        },
-        {
-          "month": "Sep 2026",
-          "isPaid": false,
-          "isExempt": false,
-          "amount": 1000
-        },
-        {
-          "month": "Oct 2026",
-          "isPaid": false,
-          "isExempt": false,
-          "amount": 1000
-        }
-      ],
-      "manualStatusOverride": true
-    },
-    {
-      "id": "flat-a-505-0804",
-      "flatNo": "A 505",
-      "wing": "A",
-      "floor": 5,
-      "residentName": "prince",
-      "email": "prince@example.com",
-      "ownership": "Owner",
-      "monthlyMaintenance": 1000,
       "status": "Pending",
       "overdueMonths": 1,
       "accumulatedArrears": 1000,
@@ -3716,6 +3669,68 @@
           "month": "Aug 2026",
           "isPaid": true,
           "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        },
+        {
+          "month": "Sep 2026",
+          "isPaid": false,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Oct 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
+        }
+      ],
+      "manualStatusOverride": true
+    },
+    {
+      "id": "flat-a-505-0804",
+      "flatNo": "A 505",
+      "wing": "A",
+      "floor": 5,
+      "residentName": "prince",
+      "email": "prince@example.com",
+      "ownership": "Owner",
+      "monthlyMaintenance": 1000,
+      "status": "Paid",
+      "overdueMonths": 0,
+      "accumulatedArrears": 0,
+      "isExemptFromDefaulter": false,
+      "lastPaidDate": "Today",
+      "lastPaymentMode": "UPI",
+      "referenceNo": null,
+      "secretaryNotes": "",
+      "history": [],
+      "monthlyDues": [
+        {
+          "month": "May 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jun 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Jul 2026",
+          "isPaid": true,
+          "isExempt": false,
+          "amount": 1000
+        },
+        {
+          "month": "Aug 2026",
+          "isPaid": true,
+          "isExempt": false,
           "amount": 1000
         },
         {
@@ -3726,11 +3741,14 @@
         },
         {
           "month": "Oct 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         }
-      ]
+      ],
+      "manualStatusOverride": true
     },
     {
       "id": "flat-a-507-9165",
@@ -3741,12 +3759,12 @@
       "email": "....@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Paid",
-      "overdueMonths": 0,
-      "accumulatedArrears": 0,
+      "status": "Defaulter",
+      "overdueMonths": 2,
+      "accumulatedArrears": 2000,
       "isExemptFromDefaulter": false,
-      "lastPaidDate": "Today",
-      "lastPaymentMode": "UPI",
+      "lastPaidDate": null,
+      "lastPaymentMode": null,
       "referenceNo": null,
       "secretaryNotes": "",
       "history": [],
@@ -3779,19 +3797,15 @@
         },
         {
           "month": "Sep 2026",
-          "isPaid": true,
+          "isPaid": false,
           "isExempt": false,
-          "amount": 1000,
-          "paidDate": "Today",
-          "paymentMode": "UPI"
+          "amount": 1000
         },
         {
           "month": "Oct 2026",
-          "isPaid": true,
+          "isPaid": false,
           "isExempt": false,
-          "amount": 1000,
-          "paidDate": "Today",
-          "paymentMode": "UPI"
+          "amount": 1000
         }
       ],
       "manualStatusOverride": true
@@ -3865,9 +3879,9 @@
       "email": "sandeep@example.com",
       "ownership": "Owner",
       "monthlyMaintenance": 1000,
-      "status": "Defaulter",
-      "overdueMonths": 3,
-      "accumulatedArrears": 3000,
+      "status": "Pending",
+      "overdueMonths": 1,
+      "accumulatedArrears": 1000,
       "isExemptFromDefaulter": false,
       "lastPaidDate": null,
       "lastPaymentMode": null,
@@ -3901,15 +3915,19 @@
         },
         {
           "month": "Sep 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         },
         {
           "month": "Oct 2026",
-          "isPaid": false,
+          "isPaid": true,
           "isExempt": false,
-          "amount": 1000
+          "amount": 1000,
+          "paidDate": "Today",
+          "paymentMode": "UPI"
         }
       ],
       "manualStatusOverride": true
@@ -4095,5 +4113,22 @@
     }
   ],
   "expenses": [],
-  "timestamp": "2026-10-10T23:39:20.955Z"
+  "config": {
+    "name": "Times Square Apartments",
+    "subTitle": "Co-operative Housing Society Ltd.",
+    "address": "Plot 42, Sector 18, Palm Beach Avenue, Navi Mumbai - 400705",
+    "registrationNo": "MUM/HSG/TC/10492/2021",
+    "currentBillingMonth": "Oct 2026",
+    "defaultMonthlyMaintenance": 5500,
+    "secretaryName": "Nitin Kulkarni",
+    "secretaryContact": "+91 98201 12345",
+    "upiId": "timessquare.society@okhdfcbank",
+    "bankDetails": {
+      "accountName": "Times Square CHS Maintenance A/C",
+      "accountNo": "50200088192341",
+      "ifsc": "HDFC0001042",
+      "bankName": "HDFC Bank, Palm Beach Branch"
+    }
+  },
+  "exportedAt": "2026-10-14T16:27:52.497Z"
 }
