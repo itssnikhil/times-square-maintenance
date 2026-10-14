@@ -1,7 +1,8 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { FlatUnit, INITIAL_FLATS, BILLING_MONTHS } from './data/mockData';
 import { SocietyExpense, INITIAL_EXPENSES } from './data/expenseData';
 import { StorageService } from './services/storage';
+import { SupabaseService } from './services/supabase';
 import { SimpleEditModal } from './components/SimpleEditModal';
 import { AddFlatModal } from './components/AddFlatModal';
 import { ExpenseModal } from './components/ExpenseModal';
@@ -63,6 +64,8 @@ export function App() {
   const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
   const [isPinModalOpen, setIsPinModalOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState<boolean>(() => StorageService.isAdminAuthenticated());
+  const [isCloudSynced, setIsCloudSynced] = useState<boolean>(true);
+  const isRemoteUpdate = useRef(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const showToast = (msg: string) => {
@@ -91,17 +94,61 @@ export function App() {
     }).format(amt);
   };
 
-  // Auto-sync data to local server disk (so it can be permanently deployed to GitHub/Vercel)
+  // 1. Initial Supabase Live Cloud Fetch & Realtime Subscription
   useEffect(() => {
-    try {
-      if (flats && flats.length > 0) {
+    let isMounted = true;
+
+    SupabaseService.getSocietyData(flats, expenses).then((cloudData) => {
+      if (isMounted && cloudData && cloudData.flats && cloudData.flats.length > 0) {
+        isRemoteUpdate.current = true;
+        setFlats(cloudData.flats);
+        setExpenses(cloudData.expenses);
+        StorageService.saveFlats(cloudData.flats);
+        StorageService.saveExpenses(cloudData.expenses);
+        setIsCloudSynced(true);
+      }
+    });
+
+    SupabaseService.subscribe((remoteData) => {
+      if (isMounted && remoteData && remoteData.flats && remoteData.flats.length > 0) {
+        isRemoteUpdate.current = true;
+        setFlats(remoteData.flats);
+        setExpenses(remoteData.expenses);
+        StorageService.saveFlats(remoteData.flats);
+        StorageService.saveExpenses(remoteData.expenses);
+        setIsCloudSynced(true);
+        showToast('🔄 Live sync: Data updated across devices');
+      }
+    });
+
+    return () => {
+      isMounted = false;
+      SupabaseService.unsubscribe();
+    };
+  }, []);
+
+  // 2. Auto-sync data to Supabase cloud and local server disk
+  useEffect(() => {
+    if (isRemoteUpdate.current) {
+      isRemoteUpdate.current = false;
+      return;
+    }
+
+    if (flats && flats.length > 0) {
+      // Live sync to Supabase Cloud
+      SupabaseService.saveSocietyData(flats, expenses).then((ok) => {
+        if (ok) setIsCloudSynced(true);
+      });
+
+      // Secondary sync to local server disk (if running dev server)
+      try {
         fetch('/api/sync-data', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ flats, expenses, timestamp: new Date().toISOString() }),
         }).catch(() => {});
-      }
-    } catch (e) {}
+      } catch (e) {}
+    }
   }, [flats, expenses]);
 
   // -------------------------------------------------------------
@@ -463,6 +510,17 @@ export function App() {
                 </h1>
                 <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-yellow-400/20 text-yellow-300 border border-yellow-400/40 uppercase">
                   {selectedBillingMonth}
+                </span>
+                <span 
+                  className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold border ${
+                    isCloudSynced
+                      ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/40'
+                      : 'bg-amber-950/80 text-amber-300 border-amber-500/40'
+                  }`}
+                  title="Supabase Real-Time Cloud: Changes sync instantly across all devices"
+                >
+                  <span className={`w-1.5 h-1.5 rounded-full ${isCloudSynced ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`}></span>
+                  <span>Cloud Live</span>
                 </span>
               </div>
               <p className="text-xs text-slate-400 truncate">
