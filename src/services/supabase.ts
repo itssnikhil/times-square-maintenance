@@ -15,11 +15,8 @@ export const CLIENT_ID = 'device_' + Math.random().toString(36).substring(2, 9) 
 let activeChannel: RealtimeChannel | null = null;
 
 export const SupabaseService = {
-  // Fetch from Supabase, or initialize if table row doesn't exist
-  async getSocietyData(
-    initialFlats: FlatUnit[],
-    initialExpenses: SocietyExpense[]
-  ): Promise<{ flats: FlatUnit[]; expenses: SocietyExpense[] } | null> {
+  // Fetch from Supabase (Strictly READ-ONLY: never writes to cloud on load)
+  async getSocietyData(): Promise<{ flats: FlatUnit[]; expenses: SocietyExpense[] } | null> {
     try {
       const { data, error } = await supabase
         .from('society_data')
@@ -28,7 +25,7 @@ export const SupabaseService = {
         .maybeSingle();
 
       if (error) {
-        console.warn('[Supabase] Notice:', error.message);
+        console.warn('[Supabase] Read error:', error.message);
         return null;
       }
 
@@ -39,13 +36,7 @@ export const SupabaseService = {
         };
       }
 
-      // If record does not exist in the database yet, initialize it
-      console.log('[Supabase] Initializing society record in cloud database...');
-      await this.saveSocietyData(initialFlats, initialExpenses);
-      return {
-        flats: initialFlats,
-        expenses: initialExpenses,
-      };
+      return null;
     } catch (err) {
       console.error('[Supabase] Fetch error:', err);
       return null;

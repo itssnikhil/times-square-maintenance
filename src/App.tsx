@@ -97,7 +97,7 @@ export function App() {
   useEffect(() => {
     let isMounted = true;
 
-    SupabaseService.getSocietyData(flats, expenses).then((cloudData) => {
+    SupabaseService.getSocietyData().then((cloudData) => {
       if (isMounted && cloudData && cloudData.flats && cloudData.flats.length > 0) {
         setFlats(cloudData.flats);
         setExpenses(cloudData.expenses);
@@ -520,15 +520,15 @@ export function App() {
                   {selectedBillingMonth}
                 </span>
                 <span 
-                  className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold border ${
+                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-black tracking-wide border shadow-xs ${
                     isCloudSynced
-                      ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/40'
-                      : 'bg-amber-950/80 text-amber-300 border-amber-500/40'
+                      ? 'bg-emerald-900/90 text-emerald-300 border-emerald-400/60'
+                      : 'bg-amber-900/90 text-amber-300 border-amber-400/60'
                   }`}
                   title="Supabase Real-Time Cloud: Changes sync instantly across all devices"
                 >
-                  <span className={`w-1.5 h-1.5 rounded-full ${isCloudSynced ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`}></span>
-                  <span>Cloud Live</span>
+                  <span className={`w-2 h-2 rounded-full ${isCloudSynced ? 'bg-emerald-400 animate-pulse shadow-sm shadow-emerald-400' : 'bg-amber-400'}`}></span>
+                  <span>LIVE CLOUD</span>
                 </span>
               </div>
               <p className="text-xs text-slate-400 truncate">
