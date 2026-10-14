@@ -65,7 +65,6 @@ export function App() {
   const [isPinModalOpen, setIsPinModalOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState<boolean>(() => StorageService.isAdminAuthenticated());
   const [isCloudSynced, setIsCloudSynced] = useState<boolean>(true);
-  const isRemoteUpdate = useRef(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const showToast = (msg: string) => {
@@ -100,7 +99,6 @@ export function App() {
 
     SupabaseService.getSocietyData(flats, expenses).then((cloudData) => {
       if (isMounted && cloudData && cloudData.flats && cloudData.flats.length > 0) {
-        isRemoteUpdate.current = true;
         setFlats(cloudData.flats);
         setExpenses(cloudData.expenses);
         StorageService.saveFlats(cloudData.flats);
@@ -111,7 +109,6 @@ export function App() {
 
     SupabaseService.subscribe((remoteData) => {
       if (isMounted && remoteData && remoteData.flats && remoteData.flats.length > 0) {
-        isRemoteUpdate.current = true;
         setFlats(remoteData.flats);
         setExpenses(remoteData.expenses);
         StorageService.saveFlats(remoteData.flats);
@@ -127,29 +124,42 @@ export function App() {
     };
   }, []);
 
-  // 2. Auto-sync data to Supabase cloud and local server disk
-  useEffect(() => {
-    if (isRemoteUpdate.current) {
-      isRemoteUpdate.current = false;
-      return;
-    }
+  // Dedicated save and broadcast functions for Secretary actions (No auto-useEffect loops)
+  const syncFlatsChange = (nextFlats: FlatUnit[], toastMsg?: string) => {
+    setFlats(nextFlats);
+    StorageService.saveFlats(nextFlats);
+    if (toastMsg) showToast(toastMsg);
+    setIsCloudSynced(false);
+    SupabaseService.saveSocietyData(nextFlats, expenses).then((ok) => {
+      if (ok) setIsCloudSynced(true);
+    });
 
-    if (flats && flats.length > 0) {
-      // Live sync to Supabase Cloud
-      SupabaseService.saveSocietyData(flats, expenses).then((ok) => {
-        if (ok) setIsCloudSynced(true);
-      });
+    try {
+      fetch('/api/sync-data', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ flats: nextFlats, expenses, timestamp: new Date().toISOString() }),
+      }).catch(() => {});
+    } catch (e) {}
+  };
 
-      // Secondary sync to local server disk (if running dev server)
-      try {
-        fetch('/api/sync-data', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ flats, expenses, timestamp: new Date().toISOString() }),
-        }).catch(() => {});
-      } catch (e) {}
-    }
-  }, [flats, expenses]);
+  const syncExpensesChange = (nextExpenses: SocietyExpense[], toastMsg?: string) => {
+    setExpenses(nextExpenses);
+    StorageService.saveExpenses(nextExpenses);
+    if (toastMsg) showToast(toastMsg);
+    setIsCloudSynced(false);
+    SupabaseService.saveSocietyData(flats, nextExpenses).then((ok) => {
+      if (ok) setIsCloudSynced(true);
+    });
+
+    try {
+      fetch('/api/sync-data', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ flats, expenses: nextExpenses, timestamp: new Date().toISOString() }),
+      }).catch(() => {});
+    } catch (e) {}
+  };
 
   // -------------------------------------------------------------
   // FLAT MAINTENANCE ACTIONS
@@ -173,9 +183,7 @@ export function App() {
   };
 
   const handleSaveAllDues = (updatedFlats: FlatUnit[]) => {
-    setFlats(updatedFlats);
-    StorageService.saveFlats(updatedFlats);
-    showToast('Updated Pending & Defaulter list and amounts successfully');
+    syncFlatsChange(updatedFlats, 'Updated Pending & Defaulter list and amounts successfully');
   };
 
   const handleRequestAddFlat = () => {
@@ -189,23 +197,17 @@ export function App() {
 
   const handleSaveFlat = (updated: FlatUnit) => {
     const nextFlats = flats.map((f) => (f.id === updated.id ? updated : f));
-    setFlats(nextFlats);
-    StorageService.saveFlats(nextFlats);
-    showToast(`Updated Flat ${updated.flatNo} (${updated.status})`);
+    syncFlatsChange(nextFlats, `Updated Flat ${updated.flatNo} (${updated.status})`);
   };
 
   const handleAddFlat = (newFlat: FlatUnit) => {
     const nextFlats = [...flats, newFlat];
-    setFlats(nextFlats);
-    StorageService.saveFlats(nextFlats);
-    showToast(`Added Flat ${newFlat.flatNo} to Wing ${newFlat.wing}`);
+    syncFlatsChange(nextFlats, `Added Flat ${newFlat.flatNo} to Wing ${newFlat.wing}`);
   };
 
   const handleDeleteFlat = (flatId: string) => {
     const nextFlats = flats.filter((f) => f.id !== flatId);
-    setFlats(nextFlats);
-    StorageService.saveFlats(nextFlats);
-    showToast('Flat removed from records');
+    syncFlatsChange(nextFlats, 'Flat removed from records');
   };
 
   // -------------------------------------------------------------
@@ -239,16 +241,12 @@ export function App() {
     } else {
       nextExpenses = [savedExpense, ...expenses];
     }
-    setExpenses(nextExpenses);
-    StorageService.saveExpenses(nextExpenses);
-    showToast(`Saved expense: ${savedExpense.title} (${savedExpense.status})`);
+    syncExpensesChange(nextExpenses, `Saved expense: ${savedExpense.title} (${savedExpense.status})`);
   };
 
   const handleDeleteExpense = (id: string) => {
     const nextExpenses = expenses.filter((e) => e.id !== id);
-    setExpenses(nextExpenses);
-    StorageService.saveExpenses(nextExpenses);
-    showToast('Expense record removed');
+    syncExpensesChange(nextExpenses, 'Expense record removed');
   };
 
   const handleToggleExpenseStatus = (expense: SocietyExpense) => {
@@ -280,6 +278,10 @@ export function App() {
       const reset = StorageService.resetAll();
       setFlats(reset.flats);
       setExpenses(reset.expenses);
+      setIsCloudSynced(false);
+      SupabaseService.saveSocietyData(reset.flats, reset.expenses).then((ok) => {
+        if (ok) setIsCloudSynced(true);
+      });
       showToast('Reset to official 70 society flats');
     }
   };
@@ -313,9 +315,15 @@ export function App() {
 
       const result = StorageService.importData(content);
       if (result.success) {
-        if (result.flats) setFlats(result.flats);
-        if (result.expenses) setExpenses(result.expenses);
-        showToast('Society data successfully restored!');
+        const nextFlats = result.flats || flats;
+        const nextExpenses = result.expenses || expenses;
+        setFlats(nextFlats);
+        setExpenses(nextExpenses);
+        setIsCloudSynced(false);
+        SupabaseService.saveSocietyData(nextFlats, nextExpenses).then((ok) => {
+          if (ok) setIsCloudSynced(true);
+        });
+        showToast('Society data successfully restored & synced to cloud!');
       } else {
         alert(result.message || 'Failed to restore data.');
       }
