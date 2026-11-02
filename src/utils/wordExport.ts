@@ -1,4 +1,4 @@
-import { FlatUnit } from '../data/mockData';
+import { FlatUnit, BILLING_MONTHS } from '../data/mockData';
 
 // Helper for Indian Currency formatting
 const formatINR = (amt: number) => {
@@ -13,38 +13,64 @@ export const exportPendingAndDefaultersToWord = (
   flats: FlatUnit[],
   selectedBillingMonth: string = 'Nov 2026'
 ) => {
-  // Filter only Pending and Defaulter flats (strictly excluding exempt flats and exempt vacant months)
-  const overdueFlats = flats.filter((flat) => {
-    // If flat was empty, exempted or cleared, completely exclude from overdue notice
+  const targetIndex = BILLING_MONTHS.indexOf(selectedBillingMonth);
+
+  // Helper to get all unpaid non-exempt months up to selectedBillingMonth
+  const getFlatUnpaidMonths = (flat: FlatUnit) => {
     const isFlatEmpty = flat.status === 'Empty' || Boolean(flat.isExemptFromDefaulter) || (flat.monthlyDues && flat.monthlyDues.length > 0 && flat.monthlyDues.every(m => m.isExempt));
-    if (isFlatEmpty || flat.status === 'Paid') {
+    if (isFlatEmpty) return [];
+    if (!flat.monthlyDues || flat.monthlyDues.length === 0) return [];
+    return flat.monthlyDues.filter((m) => {
+      if (m.isPaid || m.isExempt) return false;
+      if (targetIndex !== -1) {
+        const idx = BILLING_MONTHS.indexOf(m.month);
+        return idx !== -1 && idx <= targetIndex;
+      }
+      return true;
+    });
+  };
+
+  // Helper to determine if flat is a Defaulter (2+ unpaid months up to selected month or manually marked)
+  const isFlatDefaulter = (flat: FlatUnit) => {
+    const unpaidList = getFlatUnpaidMonths(flat);
+    return flat.status === 'Defaulter' || unpaidList.length >= 2;
+  };
+
+  // Helper to get total due amount
+  const getFlatTotalDue = (flat: FlatUnit) => {
+    if (flat.customOverdueAmount !== undefined) {
+      return flat.customOverdueAmount;
+    }
+    const unpaidList = getFlatUnpaidMonths(flat);
+    if (unpaidList.length > 0) {
+      return unpaidList.reduce((sum, m) => sum + (m.amount || flat.monthlyMaintenance || 1000), 0);
+    }
+    return flat.monthlyMaintenance || 1000;
+  };
+
+  // Filter all flats that have unpaid dues up to selectedBillingMonth (strictly excluding empty/vacant flats)
+  const overdueFlats = flats.filter((flat) => {
+    const isFlatEmpty = flat.status === 'Empty' || Boolean(flat.isExemptFromDefaulter) || (flat.monthlyDues && flat.monthlyDues.length > 0 && flat.monthlyDues.every(m => m.isExempt));
+    if (isFlatEmpty) {
       return false;
     }
-    const dueForMonth = flat.monthlyDues?.find((m) => m.month === selectedBillingMonth);
-    const isPaidInMonth = dueForMonth ? (dueForMonth.isPaid || dueForMonth.isExempt) : false;
-    const unpaidList = flat.monthlyDues?.filter((m) => !m.isPaid && !m.isExempt) || [];
-    
-    // Include only if not paid in selected month OR has any unpaid non-exempt months
-    return !isPaidInMonth || unpaidList.length > 0;
+    const unpaidList = getFlatUnpaidMonths(flat);
+    return unpaidList.length > 0;
   }).sort((a, b) => {
-    // Defaulters first, then by flat number
-    const aUnpaid = (a.monthlyDues?.filter(m => !m.isPaid && !m.isExempt) || []).length;
-    const bUnpaid = (b.monthlyDues?.filter(m => !m.isPaid && !m.isExempt) || []).length;
+    const aDef = isFlatDefaulter(a);
+    const bDef = isFlatDefaulter(b);
+    if (aDef && !bDef) return -1;
+    if (!aDef && bDef) return 1;
+
+    const aUnpaid = getFlatUnpaidMonths(a).length;
+    const bUnpaid = getFlatUnpaidMonths(b).length;
     if (aUnpaid !== bUnpaid) return bUnpaid - aUnpaid;
-    return a.flatNo.localeCompare(b.flatNo);
+
+    return a.flatNo.localeCompare(b.flatNo, undefined, { numeric: true });
   });
 
-  const totalOverdueAmount = overdueFlats.reduce((sum, f) => {
-    if (f.customOverdueAmount !== undefined) return sum + f.customOverdueAmount;
-    if (f.accumulatedArrears > 0) return sum + f.accumulatedArrears;
-    const unpaidList = f.monthlyDues?.filter((m) => !m.isPaid && !m.isExempt) || [];
-    const amount = unpaidList.length > 0
-      ? unpaidList.reduce((s, m) => s + m.amount, 0)
-      : f.monthlyMaintenance;
-    return sum + amount;
-  }, 0);
-
-  const defaultersCount = overdueFlats.filter(f => f.manualStatusOverride ? f.status === 'Defaulter' : (f.status === 'Defaulter' || (f.monthlyDues?.filter(m => !m.isPaid && !m.isExempt) || []).length >= 2)).length;
+  const totalOverdueAmount = overdueFlats.reduce((sum, f) => sum + getFlatTotalDue(f), 0);
+  const defaultersCount = overdueFlats.filter(f => isFlatDefaulter(f)).length;
   const pendingCount = overdueFlats.length - defaultersCount;
 
   const generatedDate = new Date().toLocaleDateString('en-IN', {
@@ -55,22 +81,13 @@ export const exportPendingAndDefaultersToWord = (
 
   // Table rows HTML
   const tableRows = overdueFlats.map((flat, index) => {
-    const unpaidMonths = flat.monthlyDues?.filter((m) => !m.isPaid && !m.isExempt) || [];
+    const unpaidMonths = getFlatUnpaidMonths(flat);
     const unpaidListFormatted = unpaidMonths.length > 0
-      ? unpaidMonths.map(m => `<b>${m.month}</b> (₹${m.amount})`).join(', ')
-      : `<b>${selectedBillingMonth}</b> (₹${flat.monthlyMaintenance})`;
+      ? unpaidMonths.map(m => `<b>${m.month}</b> (₹${m.amount || flat.monthlyMaintenance || 1000})`).join(', ')
+      : `<b>${selectedBillingMonth}</b> (₹${flat.monthlyMaintenance || 1000})`;
 
-    const totalDue = flat.customOverdueAmount !== undefined
-      ? flat.customOverdueAmount
-      : (flat.accumulatedArrears > 0
-          ? flat.accumulatedArrears
-          : (unpaidMonths.length > 0
-              ? unpaidMonths.reduce((sum, m) => sum + m.amount, 0)
-              : flat.monthlyMaintenance));
-
-    const isDefaulter = flat.manualStatusOverride 
-      ? flat.status === 'Defaulter' 
-      : (flat.status === 'Defaulter' || unpaidMonths.length >= 2);
+    const totalDue = getFlatTotalDue(flat);
+    const isDefaulter = isFlatDefaulter(flat);
     const statusLabel = isDefaulter ? 'DEFAULTER' : 'PENDING';
     const statusColor = isDefaulter ? '#b91c1c' : '#b45309';
     const rowBg = index % 2 === 0 ? '#ffffff' : '#f8fafc';

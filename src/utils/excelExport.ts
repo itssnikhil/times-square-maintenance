@@ -32,15 +32,24 @@ export const exportFlatsToExcel = (
       });
     }
 
-    const totalDue = (f.status === 'Paid' || isFullyExempt)
+    const totalDue = isFullyExempt
       ? 0 
       : (f.customOverdueAmount !== undefined
           ? f.customOverdueAmount
-          : (f.status === 'Defaulter' ? f.accumulatedArrears : (f.accumulatedArrears || f.monthlyMaintenance)));
+          : (unpaidList.length > 0
+              ? unpaidList.reduce((sum, mName) => {
+                  const due = f.monthlyDues?.find(d => d.month === mName);
+                  return sum + (due?.amount || f.monthlyMaintenance || 1000);
+                }, 0)
+              : 0));
 
     const displayStatus = isFullyExempt
       ? 'Empty (Vacant Flat - ₹0 Due)'
-      : f.status;
+      : (unpaidList.length === 0
+          ? 'Paid'
+          : (f.status === 'Defaulter' || unpaidList.length >= 2 ? 'Defaulter' : 'Pending'));
+
+    const isAllCleared = !isFullyExempt && unpaidList.length === 0;
 
     return {
       'Flat No': f.flatNo,
@@ -53,9 +62,9 @@ export const exportFlatsToExcel = (
       'Unpaid Months Count': isFullyExempt ? 0 : unpaidList.length,
       'Unpaid Months List': (isFullyExempt || unpaidList.length === 0) ? 'None' : unpaidList.join(', '),
       'Total Outstanding Due (₹)': totalDue,
-      'Payment Mode': (f.status === 'Paid') ? (f.lastPaymentMode || 'UPI') : '-',
-      'Payment Date': (f.status === 'Paid') ? (f.lastPaidDate || '-') : '-',
-      'Reference / UTR': (f.status === 'Paid') ? (f.referenceNo || '-') : '-',
+      'Payment Mode': isAllCleared ? (f.lastPaymentMode || 'UPI') : '-',
+      'Payment Date': isAllCleared ? (f.lastPaidDate || '-') : '-',
+      'Reference / UTR': isAllCleared ? (f.referenceNo || '-') : '-',
       'Notes': f.secretaryNotes || (isFullyExempt ? (f.exemptionReason || 'Flat was empty / Vacant') : ''),
     };
   });
