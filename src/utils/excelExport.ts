@@ -5,7 +5,7 @@ import { SocietyExpense } from '../data/expenseData';
 export const exportFlatsToExcel = (
   flats: FlatUnit[], 
   expenses: SocietyExpense[] = [],
-  currentMonth: string = 'October 2026'
+  currentMonth: string = 'November 2026'
 ) => {
   // Sheet 1: Maintenance Collection & Dues
   const flatsData = flats.map((f) => {

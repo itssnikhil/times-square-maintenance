@@ -48,7 +48,7 @@ export function App() {
   // Maintenance Page Filters
   const [activeTab, setActiveTab] = useState<'ALL' | 'PAID' | 'PENDING' | 'DEFAULTER' | 'EMPTY'>('ALL');
   const [selectedWing, setSelectedWing] = useState<'ALL' | 'A' | 'C'>('ALL');
-  const [selectedBillingMonth, setSelectedBillingMonth] = useState<string>('Oct 2026');
+  const [selectedBillingMonth, setSelectedBillingMonth] = useState<string>('Nov 2026');
   const [searchQuery, setSearchQuery] = useState('');
   
   // Expenses Page Filters
@@ -99,11 +99,35 @@ export function App() {
 
     SupabaseService.getSocietyData().then((cloudData) => {
       if (isMounted && cloudData && cloudData.flats && cloudData.flats.length > 0) {
-        setFlats(cloudData.flats);
+        let hasNewMonths = false;
+        const normalized = cloudData.flats.map((flat) => {
+          const isFlatEmpty = flat.status === 'Empty' || Boolean(flat.isExemptFromDefaulter) || (flat.monthlyDues && flat.monthlyDues.length > 0 && flat.monthlyDues.every(d => d.isExempt));
+          const existingMap = new Map((flat.monthlyDues || []).map(d => [d.month, d]));
+          let flatChanged = false;
+          const nextDues = BILLING_MONTHS.map((m) => {
+            if (existingMap.has(m)) return existingMap.get(m)!;
+            flatChanged = true;
+            if (isFlatEmpty) {
+              return { month: m, amount: 0, isPaid: false, isExempt: true };
+            }
+            return { month: m, amount: flat.monthlyMaintenance || 1000, isPaid: false, isExempt: false };
+          });
+          if (flatChanged) {
+            hasNewMonths = true;
+            return { ...flat, monthlyDues: nextDues };
+          }
+          return flat;
+        });
+
+        setFlats(normalized);
         setExpenses(cloudData.expenses);
-        StorageService.saveFlats(cloudData.flats);
+        StorageService.saveFlats(normalized);
         StorageService.saveExpenses(cloudData.expenses);
         setIsCloudSynced(true);
+
+        if (hasNewMonths) {
+          SupabaseService.saveSocietyData(normalized, cloudData.expenses);
+        }
       }
     });
 
@@ -356,12 +380,20 @@ export function App() {
     return false;
   };
 
-  const getUnpaidMonths = (flat: FlatUnit) => {
+  const getUnpaidMonths = (flat: FlatUnit, upToMonth?: string) => {
     if (flat.status === 'Empty' || flat.isExemptFromDefaulter) {
       return [];
     }
     if (flat.monthlyDues && flat.monthlyDues.length > 0) {
-      return flat.monthlyDues.filter((m) => !m.isPaid && !m.isExempt);
+      const targetIndex = upToMonth ? BILLING_MONTHS.indexOf(upToMonth) : -1;
+      return flat.monthlyDues.filter((m) => {
+        if (m.isPaid || m.isExempt) return false;
+        if (targetIndex !== -1) {
+          const idx = BILLING_MONTHS.indexOf(m.month);
+          return idx !== -1 && idx <= targetIndex;
+        }
+        return true;
+      });
     }
     return [];
   };
@@ -387,7 +419,7 @@ export function App() {
         return 'Paid';
       }
       // If NOT paid in this specific month:
-      const totalUnpaid = getUnpaidMonths(flat).length;
+      const totalUnpaid = getUnpaidMonths(flat, monthName).length;
       if (totalUnpaid >= 2 || flat.status === 'Defaulter') {
         return 'Defaulter';
       }
@@ -399,7 +431,7 @@ export function App() {
       return flat.status;
     }
 
-    const unpaidList = getUnpaidMonths(flat);
+    const unpaidList = getUnpaidMonths(flat, monthName);
     if (unpaidList.length === 0) return 'Paid';
     if (flat.status === 'Defaulter' || unpaidList.length >= 2) return 'Defaulter';
     return 'Pending';
@@ -700,13 +732,13 @@ export function App() {
            ========================================================================= */}
         {currentPage === 'maintenance' && (
           <div className="space-y-4">
-            {/* 📅 MONTH SELECTOR BAR (May 2026 - Oct 2026) */}
+            {/* 📅 MONTH SELECTOR BAR (May 2026 - Nov 2026) */}
             <div className="bg-white p-3 rounded-2xl border border-slate-300 shadow-xs space-y-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-yellow-600 shrink-0" />
                   <span className="text-xs font-black text-slate-950 uppercase">
-                    Select Billing Month (May–Oct 2026):
+                    Select Billing Month (May–Nov 2026):
                   </span>
                 </div>
                 <span className="text-xs font-bold text-slate-900 bg-yellow-300 px-2 py-0.5 rounded-lg border border-yellow-500 font-mono">
@@ -714,7 +746,7 @@ export function App() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-3 sm:grid-cols-6 gap-1 sm:gap-1.5">
+              <div className="grid grid-cols-4 sm:grid-cols-7 gap-1 sm:gap-1.5">
                 {BILLING_MONTHS.map((m) => (
                   <button
                     key={m}
@@ -1423,7 +1455,7 @@ export function App() {
     const isDefaulter = curStatus === 'Defaulter';
     const isPaid = curStatus === 'Paid';
     const isEmpty = curStatus === 'Empty';
-    const allUnpaid = getUnpaidMonths(flat);
+    const allUnpaid = getUnpaidMonths(flat, selectedBillingMonth);
     const priorUnpaid = allUnpaid.filter((m) => m.month !== selectedBillingMonth);
     const hasPriorUnpaid = isPaid && priorUnpaid.length > 0;
 
@@ -1550,10 +1582,10 @@ export function App() {
           </div>
         </div>
 
-        {/* 📅 Month-by-month status track (Clean 6-month grid: May to Oct 2026) */}
+        {/* 📅 Month-by-month status track (Clean 7-month grid: May to Nov 2026) */}
         <div className="mt-3 p-2 bg-slate-50 rounded-xl border border-slate-200">
           <div className="flex items-center justify-between text-[11px] mb-1.5 font-bold text-slate-600">
-            <span>Dues by Month (May–Oct 2026):</span>
+            <span>Dues by Month (May–Nov 2026):</span>
             <span className="font-mono text-slate-800">
               {isEmpty ? (
                 <span className="text-yellow-800 font-bold">Flat Empty (₹0 Due)</span>
@@ -1567,7 +1599,7 @@ export function App() {
             </span>
           </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5">
+          <div className="grid grid-cols-4 sm:grid-cols-7 gap-1.5">
             {flat.monthlyDues?.map((m) => (
               <div
                 key={m.month}

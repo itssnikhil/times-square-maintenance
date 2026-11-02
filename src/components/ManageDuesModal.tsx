@@ -45,7 +45,7 @@ export const ManageDuesModal: React.FC<ManageDuesModalProps> = ({
   onClose,
   flats,
   onSaveAll,
-  currentMonth = 'Oct 2026',
+  currentMonth = 'Nov 2026',
 }) => {
   if (!isOpen) return null;
 

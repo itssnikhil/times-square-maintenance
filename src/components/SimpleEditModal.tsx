@@ -25,14 +25,17 @@ export const SimpleEditModal: React.FC<SimpleEditModalProps> = ({
   const [isExemptFromDefaulter, setIsExemptFromDefaulter] = useState<boolean>(Boolean(flat.isExemptFromDefaulter));
   const [exemptionReason, setExemptionReason] = useState<string>(flat.exemptionReason || '');
   const [monthlyDues, setMonthlyDues] = useState<MonthDueRecord[]>(() => {
-    if (flat.monthlyDues && flat.monthlyDues.length > 0) {
-      return flat.monthlyDues;
-    }
-    return BILLING_MONTHS.map((m) => ({
-      month: m,
-      isPaid: flat.status === 'Paid',
-      amount: flat.monthlyMaintenance,
-    }));
+    const isCurrentlyEmpty = flat.status === 'Empty' || Boolean(flat.isExemptFromDefaulter);
+    const existingMap = new Map((flat.monthlyDues || []).map((m) => [m.month, m]));
+    return BILLING_MONTHS.map((m) => {
+      if (existingMap.has(m)) return existingMap.get(m)!;
+      return {
+        month: m,
+        isPaid: false,
+        isExempt: isCurrentlyEmpty,
+        amount: isCurrentlyEmpty ? 0 : (flat.monthlyMaintenance || 1000),
+      };
+    });
   });
   const [paymentMode, setPaymentMode] = useState<FlatUnit['lastPaymentMode']>(flat.lastPaymentMode || 'UPI');
   const [notes, setNotes] = useState(flat.secretaryNotes || '');
@@ -68,17 +71,17 @@ export const SimpleEditModal: React.FC<SimpleEditModalProps> = ({
       setManualArrears(initialAmt);
       setIsManualArrearsActive(Boolean(!isCurrentlyEmpty && flat.customOverdueAmount !== undefined));
 
-      if (flat.monthlyDues && flat.monthlyDues.length > 0) {
-        setMonthlyDues(flat.monthlyDues);
-      } else {
-        setMonthlyDues(
-          BILLING_MONTHS.map((m) => ({
-            month: m,
-            isPaid: flat.status === 'Paid',
-            amount: flat.monthlyMaintenance,
-          }))
-        );
-      }
+      const existingMap = new Map((flat.monthlyDues || []).map((m) => [m.month, m]));
+      const normalizedDues = BILLING_MONTHS.map((m) => {
+        if (existingMap.has(m)) return existingMap.get(m)!;
+        return {
+          month: m,
+          isPaid: false,
+          isExempt: isCurrentlyEmpty,
+          amount: isCurrentlyEmpty ? 0 : (flat.monthlyMaintenance || 1000),
+        };
+      });
+      setMonthlyDues(normalizedDues);
     }
   }, [flat]);
 

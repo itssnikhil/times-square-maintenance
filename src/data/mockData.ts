@@ -68,14 +68,15 @@ export const BILLING_MONTHS = [
   'Aug 2026',
   'Sep 2026',
   'Oct 2026',
+  'Nov 2026',
 ];
 
 export const INITIAL_SOCIETY_CONFIG: SocietyConfig = {
   name: "Times Square Apartments",
   subTitle: "Co-operative Housing Society Ltd.",
-  address: "Plot 42, Sector 18, Palm Beach Avenue, Navi Mumbai - 400705",
+  address: "Tejaji Nagar, Indore",
   registrationNo: "MUM/HSG/TC/10492/2021",
-  currentBillingMonth: "Oct 2026",
+  currentBillingMonth: "Nov 2026",
   defaultMonthlyMaintenance: 5500,
   secretaryName: "Nitin Kulkarni",
   secretaryContact: "+91 98201 12345",

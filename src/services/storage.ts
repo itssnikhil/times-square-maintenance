@@ -48,33 +48,40 @@ export const StorageService = {
           updated.id = updated.id.replace('flat-b-', 'flat-c-');
         }
 
-        // Ensure billing months match BILLING_MONTHS (May 2026 to Oct 2026)
+        // Ensure billing months match BILLING_MONTHS (May 2026 to Nov 2026)
+        const isFlatEmpty = updated.status === 'Empty' || Boolean(updated.isExemptFromDefaulter) || (updated.monthlyDues && updated.monthlyDues.length > 0 && updated.monthlyDues.every(d => d.isExempt));
         const needsMonthSync = !updated.monthlyDues ||
           updated.monthlyDues.length !== BILLING_MONTHS.length ||
           updated.monthlyDues.some(d => !BILLING_MONTHS.includes(d.month));
 
         if (needsMonthSync) {
           changed = true;
-          const initial = INITIAL_FLATS.find(item => item.flatNo === updated.flatNo);
           const existingMap = new Map((updated.monthlyDues || []).map(d => [d.month, d]));
 
-          updated.monthlyDues = BILLING_MONTHS.map((m, idx) => {
+          updated.monthlyDues = BILLING_MONTHS.map((m) => {
             if (existingMap.has(m)) {
               return existingMap.get(m)!;
             }
-            const initDue = initial?.monthlyDues?.find(d => d.month === m);
-            if (initDue) return initDue;
+            if (isFlatEmpty) {
+              return {
+                month: m,
+                amount: 0,
+                isPaid: false,
+                isExempt: true,
+              };
+            }
             return {
               month: m,
-              isPaid: updated.status === 'Paid' || (updated.status === 'Pending' && idx < BILLING_MONTHS.length - 1) || (updated.status === 'Defaulter' && idx < BILLING_MONTHS.length - (updated.overdueMonths || 3)),
-              amount: updated.monthlyMaintenance || 5500,
+              amount: updated.monthlyMaintenance || 1000,
+              isPaid: false,
+              isExempt: false,
             };
           });
 
-          // Recalculate unpaid months and accumulated arrears for May-Oct cycle if not custom overridden
-          if (!updated.isCustomOverride && updated.status !== 'Empty' && !updated.isExemptFromDefaulter) {
+          // Recalculate unpaid months and accumulated arrears if not custom overridden
+          if (!updated.isCustomOverride && !isFlatEmpty) {
             const unpaid = updated.monthlyDues.filter(d => !d.isPaid && !d.isExempt);
-            updated.accumulatedArrears = unpaid.reduce((sum, d) => sum + (d.amount || updated.monthlyMaintenance || 5500), 0);
+            updated.accumulatedArrears = unpaid.reduce((sum, d) => sum + (d.amount || updated.monthlyMaintenance || 1000), 0);
             updated.overdueMonths = unpaid.length;
             if (unpaid.length === 0) {
               updated.status = 'Paid';

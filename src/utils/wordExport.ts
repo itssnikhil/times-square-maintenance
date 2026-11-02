@@ -11,7 +11,7 @@ const formatINR = (amt: number) => {
 
 export const exportPendingAndDefaultersToWord = (
   flats: FlatUnit[],
-  selectedBillingMonth: string = 'Oct 2026'
+  selectedBillingMonth: string = 'Nov 2026'
 ) => {
   // Filter only Pending and Defaulter flats (strictly excluding exempt flats and exempt vacant months)
   const overdueFlats = flats.filter((flat) => {
@@ -127,10 +127,7 @@ export const exportPendingAndDefaultersToWord = (
           TIMES SQUARE CO-OPERATIVE HOUSING SOCIETY LTD.
         </h1>
         <p style="font-size: 10pt; color: #475569; margin-top: 4px;">
-          Plot 42, Sector 18, Palm Beach Avenue, Navi Mumbai - 400705 · Registration No: MUM/HSG/TC/10492/2021
-        </p>
-        <p style="font-size: 9pt; color: #64748b; margin-top: 2px;">
-          Office Email: office@timessquarechs.in | Hon. Secretary Contact: +91 98201 12345
+          Tejaji Nagar, Indore
         </p>
       </div>
 
@@ -195,31 +192,13 @@ export const exportPendingAndDefaultersToWord = (
         </tbody>
       </table>
 
-      <!-- Settlement & Bank Instructions -->
-      <div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 12px 16px; margin-bottom: 24px; font-size: 10pt;">
-        <h4 style="font-weight: bold; color: #0f172a; margin-bottom: 6px; text-transform: uppercase; font-size: 10pt;">
-          Payment & Clearance Instructions
-        </h4>
-        <p style="margin-bottom: 4px;">
-          All members listed above are requested to clear their outstanding maintenance dues immediately via any of the following modes:
-        </p>
-        <ul style="margin: 4px 0 8px 20px; padding: 0;">
-          <li><strong>Official Society UPI ID:</strong> <span style="font-family: monospace;">timessquare.society@okhdfcbank</span></li>
-          <li><strong>Direct Bank NEFT / RTGS:</strong> A/C Name: <em>Times Square CHS Maintenance A/C</em> | A/C No: <em>50200088192341</em> | Bank: <em>HDFC Bank</em> | IFSC: <em>HDFC0001042</em></li>
-          <li><strong>Cheque / Demand Draft:</strong> In favor of <em>"Times Square Co-op Hsg Soc Ltd"</em> submitted at Society Office.</li>
-        </ul>
-        <p style="font-size: 9pt; color: #475569;">
-          * After payment, kindly notify the Society Secretary with the transaction UTR number to obtain an official stamped receipt.
-        </p>
-      </div>
-
       <!-- Signatures Block -->
       <div style="margin-top: 36px; padding-top: 16px; border-top: 1px solid #94a3b8;">
         <table style="width: 100%; border-collapse: collapse;">
           <tr>
             <td style="width: 50%; text-align: left; vertical-align: bottom;">
               <p style="font-size: 10pt; font-weight: bold; color: #0f172a;">Date: ${generatedDate}</p>
-              <p style="font-size: 9pt; color: #475569;">Navi Mumbai</p>
+              <p style="font-size: 9pt; color: #475569;">Tejaji Nagar, Indore</p>
             </td>
             <td style="width: 50%; text-align: right; vertical-align: bottom;">
               <div style="display: inline-block; text-align: center;">
